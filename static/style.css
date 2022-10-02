@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .page-head {
+    text-align: center;
+    margin: 10px;
+}
+
+/* LISTA DE JOGOS */
+.cls-jogos {
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 600px;
+    min-height: 100px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 9px rgb(0 0 0 / 0.2);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+a {
+    width: 90px;
+    height: 29px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.cls-novo-jogo {
+    background-color: rgb(33, 100, 33);
+    color: #fff;
+    float: left;
+}
+
+.cls-jogos ul {
+    margin-top: 10px;
+}
+
+.cls-jogos li div {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+li .cls-celula-1 {
+    width: 300px;
+}
+
+li .cls-celula-2 {
+    width: 200px;
+}
+
+li .cls-celula-3 {
+    width: 200px;
+}
+
+.cls-li-cabecalho,
+.cls-li-jogo {
+    width: 100%;
+    display: flex;
+}
+
+
+.cls-li-cabecalho {
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+}
+
+.cls-li-cabecalho div:hover {
+    text-decoration: underline;
+    color: #efefef;
+}
+
+.cls-li-jogo:hover div {
+    background-color: #efefef;
+    border: 1px solid #ddd;
+}
+
+.cls-li-jogo div:hover {
+    background-color: #dedede;
+}
+
+/* CADASTRO DE JOGOS */
+.cls-form-cadastro {
+    position: relative;
+    display: flex;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 1020px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 3px 3px 9px rgb(0 0 0 / 0.2);
+}
+
+.cls-form-cadastro input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    height: 29px;
+    width: 200px;
+}
