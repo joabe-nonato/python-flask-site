@@ -10,6 +10,15 @@
     margin: 10px;
 }
 
+.cls-btn {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    height: 29px;
+    width: 200px;
+}
+
 /* LISTA DE JOGOS */
 .cls-jogos {
     list-style-type: none;

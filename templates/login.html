@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="cls-form-login">
+    <form action="autenticar" method="post">
+        <input class="cls-btn" type="text" name="usuario" id="txNome" placeholder="login">
+        <input class="cls-btn" type="password" name="senha" id="psw" placeholder="senha">
+        <button class="cls-btn">Entrar</button>
+    </form>
+
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for mensagem in messages %}
+    <label>
+        {{ mensagem }}
+    </label>
+    {% endfor %}
+    {% endif%}
+    {% endwith %}
+
+</div>
+
+{% endblock %}

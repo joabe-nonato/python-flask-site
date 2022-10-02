@@ -1,39 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "template.html" %}
+{% block conteudo %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{titulo}}</title>
+<div class="cls-form-cadastro">
 
-    <link rel="stylesheet" href="../static/style.css">
-</head>
+    <form action="create" method="post">
+        <input type="text" name="nome" id="txNome" placeholder="nome">
+        <input type="text" name="categoria" id="txCategoria" placeholder="categoria">
+        <input type="text" name="console" id="txConsole" placeholder="console">
+        <input type="submit" value="Salvar">
+    </form>
 
-<body>
-    <div class="container">
-        <div class="page-head">
-            <h1>{{titulo}}</h1>
-        </div>
+    <br>
 
-        <div class="cls-form-cadastro">
+    <a href="/" class="cls-voltar">Voltar</a>
 
-            <form action="create" method="post">
-                <input type="text" name="nome" id="txNome" placeholder="nome">
-                <input type="text" name="categoria" id="txCategoria" placeholder="categoria">
-                <input type="text" name="console" id="txConsole" placeholder="console">
-                <input type="submit" value="Gravar">
-            </form>
-            
-            <br>
+</div>
 
-            <a href="/" class="cls-voltar">Voltar</a>
-
-        </div>
-
-
-    </div>
-
-</body>
-
-</html>
+{% endblock %}
