@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block conteudo %} 
+
+        <div class="cls-jogos">
+            <a href="/jogos/cadastro" class="cls-novo-jogo">Novo</a>
+
+            <ul class="cls-ul-jogos">
+                <li class="cls-li-cabecalho">
+                    <div class="cls-celula-1">Nome</div>
+                    <div class="cls-celula-2">Categoria</div>
+                    <div class="cls-celula-3">Console</div>
+                </li>
+
+                {% for registro in lista %}
+
+                <li class="cls-li-jogo">
+                    <div class="cls-celula-1">{{registro.nome}}</div>
+                    <div class="cls-celula-2">{{registro.categoria}}</div>
+                    <div class="cls-celula-3">{{registro.console}}</div>
+                </li>
+
+                {% endfor %}
+            </ul>
+
+        </div>
+
+        {% endblock %}
