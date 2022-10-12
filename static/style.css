@@ -10,6 +10,21 @@
     margin: 10px;
 }
 
+ul.cls-principal-menu{
+    list-style-type: none;    
+}
+
+
+
+.cls-btn {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    height: 29px;
+    width: 200px;
+}
+
 /* LISTA DE JOGOS */
 .cls-jogos {
     list-style-type: none;
@@ -26,7 +41,7 @@
 }
 
 
-a {
+a, .cls-deslogar {
     width: 90px;
     height: 29px;
     border: 1px solid #ccc;

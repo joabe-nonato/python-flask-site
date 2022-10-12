@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "template.html" %}
+{% block conteudo %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{titulo}}</title>
-    <link rel="stylesheet" href="../static/style.css">
+<div class="cls-principal">
+    <ul class="cls-principal-menu" >
+        <li>
+            <a href="{{ url_for('listajogos') }}">Lista de Jogos</a>
+            <a href="{{ url_for('JogoCadastro') }}">Cadastrar jogo</a>
+        </li>
+    </ul>
+</div>
 
-</head>
-
-<body>
-    <div class="container">
-        <div class="page-head">
-            <h1>{{titulo}}</h1>
-        </div>
-
-        <div class="cls-jogos">
-            <a href="cadastro" class="cls-novo-jogo">Novo</a>
-
-            <ul class="cls-ul-jogos">
-                <li class="cls-li-cabecalho">
-                    <div class="cls-celula-1">Nome</div>
-                    <div class="cls-celula-2">Categoria</div>
-                    <div class="cls-celula-3">Console</div>
-                </li>
-
-                {% for registro in lista %}
-
-                <li class="cls-li-jogo">
-                    <div class="cls-celula-1">{{registro.nome}}</div>
-                    <div class="cls-celula-2">{{registro.categoria}}</div>
-                    <div class="cls-celula-3">{{registro.console}}</div>
-                </li>
-
-                {% endfor %}
-            </ul>
-
-        </div>
-
-    </div>
-</body>
-
-</html>
+{% endblock %}

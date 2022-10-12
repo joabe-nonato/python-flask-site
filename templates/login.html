@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename="style.css" )}}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-head">
+            <h1>{{titulo}}</h1>
+        </div>
+
+        <div class="cls-form-login">
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for mensagem in messages %}
+            <label>
+                {{ mensagem }}            
+            </label>
+            {% endfor %}
+            {% endif%}
+            {% endwith %}
+
+            <form action="autenticar" method="post">
+                <input type="hidden" name="pagina" value="{{ pagina }}" >
+                <input class="cls-btn" type="text" name="usuario" id="txNome" placeholder="login">
+                <input class="cls-btn" type="password" name="senha" id="psw" placeholder="senha">
+                <button class="cls-btn">Entrar</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
