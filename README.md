@@ -1,8 +1,8 @@
 # python-flask-site
 Estudo: Site utilizando microframework Flask com linguagem de programação Python
 
-
 ## Ferramentas e Tecnologias:
+
 <div style="display: inline_block;" >
 <img title="Git & GitHub" alt="Git & GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"  width="40" height="40" />
 <img title="Visual Code" alt="Visual Studio & Visual Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" height="40" />
