@@ -21,21 +21,28 @@ usuarios = { usuario1.nick : usuario1,
 
 @app.route('/')
 def index():
-    VerificarUsuario()
+
+    if 'usuario_logado' not in session or session['usuario_logado'] is None:
+        return redirect(url_for('index'))
+
     return render_template('index.html', titulo = tlt, lista = jogos )
 
 
 @app.route('/jogos')
 def listajogos():
+    
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
         return redirect(url_for('login', pagina = url_for('jogos')))
+    
     return render_template('/jogos/index.html', titulo = tlt, lista = jogos )
 
 
 @app.route('/jogos/cadastro')
 def JogoCadastro():
+    
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
         return redirect(url_for('login', pagina = url_for('JogoCadastro')))
+    
     return render_template('/jogos/cadastro.html', titulo = tlt)
 
 
@@ -57,7 +64,9 @@ def deslogar():
 
 @app.route('/login')
 def login():
+    
     pagina_alvo = request.args.get('pagina')
+    
     return render_template('login.html', titulo = tlt, pagina = pagina_alvo)
 
 
@@ -87,7 +96,9 @@ def autenticar():
 
 
 def VerificarUsuario():
+
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
+
         return redirect(url_for('login'))
 
 
