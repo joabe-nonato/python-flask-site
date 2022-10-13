@@ -22,15 +22,18 @@
         {% if messages %}
         {% for mensagem in messages %}
         <label>
-            {{ mensagem }}            
+            {{ mensagem }}
         </label>
         {% endfor %}
         {% endif%}
         {% endwith %}
 
-        <form action="../deslogar" method="post" >
-            <button type="submit" class="cls-voltar" >Deslogar</button>
-        </form>
+        <br>
+        <div>
+            <form action="{{ url_for('deslogar') }}" method="post">
+                <button type="submit" class="cls-deslogar">Deslogar</button>
+            </form>
+        </div>
 
     </div>
 </body>

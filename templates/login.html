@@ -29,6 +29,7 @@
             {% endwith %}
 
             <form action="autenticar" method="post">
+                <input type="hidden" name="pagina" value="{{ pagina }}" >
                 <input class="cls-btn" type="text" name="usuario" id="txNome" placeholder="login">
                 <input class="cls-btn" type="password" name="senha" id="psw" placeholder="senha">
                 <button class="cls-btn">Entrar</button>

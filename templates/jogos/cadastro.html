@@ -3,7 +3,7 @@
 
 <div class="cls-form-cadastro">
 
-    <form action="../cadastrar-jogo" method="post">
+    <form action="{{ url_for('SalvarJogoNovo') }}" method="post">
         <input type="text" name="nome" id="txNome" placeholder="nome">
         <input type="text" name="categoria" id="txCategoria" placeholder="categoria">
         <input type="text" name="console" id="txConsole" placeholder="console">
@@ -12,7 +12,7 @@
 
     <br>
 
-    <a href="/" class="cls-voltar">Voltar</a>
+    <a href="{{ url_for('index') }}" class="cls-voltar">Voltar</a>
 
 </div>
 

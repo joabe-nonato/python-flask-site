@@ -1,13 +1,13 @@
 {% extends "template.html" %}
 {% block conteudo %}
 
-<div class="cls-jogos">
-<ul>
-    <li>
-        <a href="/jogos">Lista de Jogos</a>
-        <a href="/jogos/cadastro">Cadastrar jogo</a>
-    </li>
-</ul>
+<div class="cls-principal">
+    <ul class="cls-principal-menu" >
+        <li>
+            <a href="{{ url_for('listajogos') }}">Lista de Jogos</a>
+            <a href="{{ url_for('JogoCadastro') }}">Cadastrar jogo</a>
+        </li>
+    </ul>
 </div>
 
 {% endblock %}
